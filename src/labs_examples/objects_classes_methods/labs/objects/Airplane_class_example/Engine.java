@@ -8,4 +8,12 @@ public class Engine {
         this.type = type;
         this.numberOfEngines = numberOfEngines;
     }
+
+    @Override
+    public String toString() {
+        return "Engine{" +
+                "type='" + type + '\'' +
+                ", numberOfEngines=" + numberOfEngines +
+                '}';
+    }
 }

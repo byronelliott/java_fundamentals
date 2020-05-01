@@ -6,4 +6,11 @@ public class Wings {
     public Wings(int wingSpan) {
         this.wingSpan = wingSpan;
     }
+
+    @Override
+    public String toString() {
+        return "Wings{" +
+                "wingSpan=" + wingSpan +
+                '}';
+    }
 }

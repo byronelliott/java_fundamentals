@@ -9,7 +9,8 @@ public class Airplane {
     LandingGear landingGear;
     Wings wings;
 
-    public Airplane(String type, int passengers, int fuelCapacity, int currentFuelLevel, Engine engine, LandingGear landingGear, Wings wings) {
+    public Airplane(String type, int passengers, int fuelCapacity, int currentFuelLevel,
+                    Engine engine, LandingGear landingGear, Wings wings) {
         this.type = type;
         this.passengers = passengers;
         this.fuelCapacity = fuelCapacity;
@@ -17,5 +18,18 @@ public class Airplane {
         this.engine = engine;
         this.landingGear = landingGear;
         this.wings = wings;
+    }
+
+    @Override
+    public String toString() {
+        return "Airplane{" +
+                "type='" + type + '\'' +
+                ", passengers=" + passengers +
+                ", fuelCapacity=" + fuelCapacity +
+                ", currentFuelLevel=" + currentFuelLevel +
+                ", engine=" + engine +
+                ", landingGear=" + landingGear +
+                ", wings=" + wings +
+                '}';
     }
 }

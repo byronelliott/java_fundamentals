@@ -6,4 +6,11 @@ public class LandingGear {
     public LandingGear(boolean retractable) {
         this.retractable = retractable;
     }
+
+    @Override
+    public String toString() {
+        return "LandingGear{" +
+                "retractable=" + retractable +
+                '}';
+    }
 }
