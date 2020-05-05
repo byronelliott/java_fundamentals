@@ -9,8 +9,8 @@ public class Main {
         LandingGear landingGear1 = new LandingGear(true);
         Airplane airplane1 = new Airplane("Boeing", 188, 450, 221, engine1, landingGear1, wings1);
 
-        System.out.println("This " + airplane1.type + " has a " + airplane1.engine.type + ", " + airplane1.wings.wingSpan + " wingspan, "
-                + "it can carry " + airplane1.passengers + " passengers, and it has a retractable landing gear: " + airplane1.landingGear.retractable);
+        System.out.println("This " + airplane1.getBrand() +" has a " + engine1.getType() + ", " + wings1.getWingSpan() + " wingspan, "
+                + "it can carry " + airplane1.getPassengers() + " passengers, and it has a retractable landing gear: " + landingGear1.isRetractable());
         System.out.println(airplane1.toString());
         System.out.println();
 
@@ -19,9 +19,9 @@ public class Main {
         LandingGear landingGear2 = new LandingGear(false);
         Airplane airplane2 = new Airplane("Airbus", 12, 120, 89, engine2, landingGear2, wings2);
 
-        System.out.println("This " + airplane2.type + " has a " + airplane2.engine.type + ", " + airplane2.wings.wingSpan + " wingspan, "
-                + "it can carry " + airplane2.passengers + " passengers, and it has a retractable landing gear: " + airplane2.landingGear.retractable);
-        System.out.println(airplane2.type + ", " + airplane2.passengers + ", " + airplane2.fuelCapacity + ", " + airplane2.currentFuelLevel);
+       System.out.println("This " + airplane2.getBrand() +" has a " + engine2.getType() + ", " + wings2.getWingSpan() + " wingspan, "
+                + "it can carry " + airplane2.getPassengers() + " passengers, and it has a retractable landing gear: " + landingGear2.isRetractable());
+        System.out.println(airplane2.getBrand() + ", " + airplane2.getPassengers() + ", " + airplane2.getFuelCapacity() + ", " + airplane2.getCurrentFuelLevel());
         System.out.println(engine2.toString());
         System.out.println(wings2.toString());
         System.out.println(landingGear2.toString());
