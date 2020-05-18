@@ -3,8 +3,9 @@ package labs_examples.objects_classes_methods.labs.oop.A_inheritance;
 /**
  * Why does the output print in the order it does?
  *
- * You answer:
- *
+ * Your answer:
+ * The new object that was created was of the C_1 class which is extended to B_1.
+ * Then B_1 extends to A_1. Starts from the very first parent class
  */
 
 class A_1 {

@@ -1,6 +1,9 @@
 
 Without running the code below, please tell me what it will print.
 
+I tried this in my Exercise_01 setup and the result is: "Child called"
+because 'c' is a new Child
+
 
 
 public class InheritanceTest
