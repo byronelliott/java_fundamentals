@@ -11,37 +11,35 @@ public class Deck extends Card {
     public Deck() {
         Card[] cards = new Card[52];
         int count = 0;
-        for (int i = 0; i < ranks.length; i++) {
-            for (int j = 0; j < suits.length; j++) {
-                cards[count] = new Card(ranks[i], suits[j]);
+        for (String s : ranks) {
+            for (String value : suits) {
+                cards[count] = new Card(s, value);
                 count++;
             }
         }
         this.cards = cards;
-        for (Card a : cards) {
-            System.out.println(a);
-        }
+//        for (Card a : cards) {
+//            System.out.println(a);
+//        }
     }
 
-    public void deal(int numCards) {
+    public Card deal() {
         Hand deckHand = new Hand();
         deckHand.setCards(new ArrayList<>());
         Random rand = new Random();
-        for (int z = 0; z < numCards; z++) {
-            int deck_int1 = rand.nextInt(52);
+        int deck_int1 = rand.nextInt(52);
+
             if (usedCards.size() >= 52) System.out.println("Deck is Empty!");
             for (int y = 0; y <= usedCards.size();y++) {
                 if (y == deck_int1) {
                     deck_int1 = rand.nextInt(52);
                 }
                 else {
-                    System.out.println(cards[deck_int1]);
                     usedCards.add(deck_int1);
                     deckHand.getCards().add(cards[deck_int1]);
-                    System.out.println(usedCards.size());
-                    break;
+                    return cards[deck_int1];
                 }
             }
-        }
+        return deckHand;
     }
 }
