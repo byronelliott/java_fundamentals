@@ -58,10 +58,10 @@ public class BlackjackController {
             while (winnings >= bet || bet < 0) {
                 if (compareHands(computerHand.getHandValue(), playerHand.getHandValue(), name) == true) {
                     winnings += bet;
-                    System.out.println("You just added to your winnings :) " + winnings);
+                    System.out.println("You just added " + bet + " to your winnings :) " + winnings);
                 } else {
                     winnings -= bet;
-                    System.out.println("You just lost some of your winnings :( " + winnings);
+                    System.out.println("You just lost " + bet + " of your winnings :( " + winnings);
                 }
                 break;
             }
