@@ -13,7 +13,9 @@ public class BlackjackController {
 
     public static boolean playBlackJack() {
         int winnings = 100;
-
+        Player.gamesPlayed = 0;
+        Player.playerWins = 0;
+        Player.computerWins = 0;
         Scanner scan = new Scanner(System.in);
         System.out.println("Please enter your Name");
         String name = scan.nextLine();
@@ -21,6 +23,8 @@ public class BlackjackController {
 
 
         while (true) {
+            System.out.println("Games Played : " + Player.gamesPlayed);
+            System.out.println("Computer Wins : " + Player.computerWins + ", " + name + "'s Wins : " + Player.playerWins);
             Player playerHand = new Player();
             Player computerHand = new Player();
             Card temp1 = playerHand.deal();
@@ -58,13 +62,16 @@ public class BlackjackController {
             while (winnings >= bet || bet < 0) {
                 if (compareHands(computerHand.getHandValue(), playerHand.getHandValue(), name) == true) {
                     winnings += bet;
-                    System.out.println("You just added " + bet + " to your winnings :) " + winnings);
+                    Player.playerWins++;
+                    System.out.println("You just added " + bet + " to your winnings :) " + name + "'s winnings : " + winnings);
                 } else {
                     winnings -= bet;
-                    System.out.println("You just lost " + bet + " of your winnings :( " + winnings);
+                    Player.computerWins++;
+                    System.out.println("You just lost " + bet + " of your winnings :( " + name + "'s winnings : " + winnings);
                 }
                 break;
             }
+            Player.gamesPlayed++;
 
             if(winnings == 0) {
                 System.out.println("Thanks for playing you are out of money");

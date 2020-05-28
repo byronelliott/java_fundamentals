@@ -4,6 +4,9 @@ import java.util.ArrayList;
 
 public class Player extends Hand {
     String name;
+    static int gamesPlayed;
+    static int playerWins;
+    static int computerWins;
 
     public Player() {
     }
